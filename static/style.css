@@ -1,0 +1,109 @@
+/* static/style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Gradient Background */
+.animated-background {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Glass Effect Card */
+.glass-container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #00e6e6;
+}
+
+.subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  resize: none;
+  margin-bottom: 20px;
+  font-family: inherit;
+  outline: none;
+}
+
+button {
+  background: #00e6e6;
+  color: #000;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #00b3b3;
+  color: white;
+}
+
+.result {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0, 255, 200, 0.15);
+  border-left: 5px solid #00ffcc;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Animations */
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

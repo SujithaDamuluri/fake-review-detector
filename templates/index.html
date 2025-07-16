@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Review Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="animated-background">
+    <div class="glass-container">
+      <h1>🕵️‍♂️ Fake Review Detector</h1>
+      <p class="subtitle">Detect whether a review is genuine or fake using AI</p>
+
+      <form action="/predict" method="POST">
+        <textarea name="review" placeholder="Paste your review here..." required></textarea>
+        <button type="submit">🔍 Analyze Review</button>
+      </form>
+
+      {% if prediction is not none %}
+        <div class="result">
+          <h2>{{ prediction }}</h2>
+          <p>Confidence: {{ confidence }}%</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
